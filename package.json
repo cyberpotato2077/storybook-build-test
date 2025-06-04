@@ -2,6 +2,12 @@
   "name": "storybook-build-test",
   "packageManager": "yarn@4.9.2",
   "workspaces": [
+    "apps/*",
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach -p run dev",
+    "build": "yarn workspaces foreach -p run build",
+    "lint": "yarn workspaces foreach -p run lint"
+  }
 }
